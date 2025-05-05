@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Profit Problem</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <h3 class="text-center mt-3">Max Profit Problem</h3>
+                <h5 class="text-start">Mr. X owns a large strip of land in Mars Land. For the purposes of this problem
+                    assume that he has infinite land capacity. On each parcel of he can choose to
+                    develop it as per his wishes. He can build either Theatres, Pubs or Commercial
+                    Park. Commercial Park houses 6 Commercial Spaces and 8 Screen Theatres.</h5>
+                <ul>
+                    <li>A Theatre takes 5 units of time to build and covers 2x1 parcel of land.</li>
+                    <li>A Pub takes 4 units of time to develop and covers 1x1 parcel of land.</li>
+                    <li>A Commercial Park takes 10 units of time to build and covers 3x1 parcel
+                        of land.
+                    </li>
+                </ul>
+                <h6>Each period of time that a building is operational it earns him money.</h6>
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Establishment</th>
+                        <th scope="col">Earnings</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Theatre</td>
+                        <td>$1500</td>
+                      </tr>
+                      <tr>
+                        <td>Pub</td>
+                        <td>$1000</td>
+                      </tr>
+                      <tr>
+                        <td>Commercial Park</td>
+                        <td>$3000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <p>He cannot have two properties being developed in parallel in one unit of time.</p>
+                  <ul>
+                    <li>After n units of time where n is the input, he earns money based on which
+                        properties have been developed.</li>
+                    <li>The output should be T for Theatre followed by number developed, P for
+                        Pub followed by number developed and C for Commercial Park followed
+                        by number developed.</li>
+                  </ul>
+                  <h6>Challenge</h6>
+                  <ul>
+                    <li>Come up with the right mix of properties based on the period of time
+                        given as input.</li>
+                  </ul>
+
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Test Case 1</th>
+                        <th scope="col">Test Case 2</th>
+                        <th scope="col">Test Case 3</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                            <p>Time Unit: 7</p>
+                            <p>Earnings: $3000</p>
+                            <p>Solutions</p>
+                            <ol>
+                                <li>T: 1 P: 0 C: 0</li>
+                                <li>T: 0 P: 1 C: 0</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <p>Time Unit: 8</p>
+                            <p>Earnings: $4500</p>
+                            <p>Solutions</p>
+                            <ol>
+                                <li>T: 1 P: 0 C: 0</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <p>Time Unit: 13</p>
+                            <p>Earnings: $16500</p>
+                            <p>Solutions</p>
+                            <ol>
+                                <li>T: 2 P: 0 C: 0</li>
+                            </ol>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              <div class="mb-3 mt-3">
+                <label for="unitinput" class="form-label">Enter Time Unit</label>
+                <input type="number" class="form-control" id="unitinput">
+            </div>
+                    <button class="btn btn-primary" onclick='maxProfit()'>Submit</button>
+                    <p id="timeunit" class="mt-2"></p>
+                    <p id="earnings" class="mt-2"></p>
+                    <p id="solution"></p>
+            </div>
+        </div>
+       
+    </div>
+
+
+    <!-- Java Script -->
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
